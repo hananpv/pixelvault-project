@@ -18,8 +18,142 @@
       "email": "sh@gmail.com",
       "password": "123456",
       "role": "user",
-      "cart": [],
-      "wishlist": [],
+      "cart": [
+        {
+          "id": "19",
+          "title": "Assassins Creed Valhalla",
+          "developer": "Ubisoft",
+          "year": 2020,
+          "price": 3999,
+          "rating": 4.5,
+          "category": "Open World",
+          "platform": "Multi-platform",
+          "image": "/products/assasins creed.jpg",
+          "description": "Viking open-world adventure.",
+          "isNew": false,
+          "isTopSeller": true,
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "title": "The Witcher 3: Wild Hunt",
+          "developer": "CD Projekt Red",
+          "year": 2015,
+          "price": 999,
+          "rating": 4.9,
+          "category": "Story Mode",
+          "platform": "Multi-platform",
+          "image": "/products/witcher 2.jpg",
+          "description": "Fantasy RPG with deep storytelling.",
+          "isNew": false,
+          "isTopSeller": true,
+          "quantity": 28
+        },
+        {
+          "id": "2",
+          "title": "Red Dead Redemption II",
+          "developer": "Rockstar Games",
+          "year": 2018,
+          "price": 3999,
+          "rating": 4.8,
+          "category": "Story Mode",
+          "platform": "Multi-platform",
+          "image": "/products/rdr.jpg",
+          "description": "Epic western story experience.",
+          "isNew": false,
+          "isTopSeller": true,
+          "quantity": 8
+        },
+        {
+          "id": "12",
+          "title": "Battlefield 1",
+          "developer": "EA DICE",
+          "year": 2016,
+          "price": 1499,
+          "rating": 4.2,
+          "category": "Battlefield",
+          "platform": "Multi-platform",
+          "image": "/products/battlefield 1.jpg",
+          "description": "World War I shooter.",
+          "isNew": false,
+          "isTopSeller": false,
+          "quantity": 1
+        },
+        {
+          "id": "11",
+          "title": "Apex Legends",
+          "developer": "Respawn Entertainment",
+          "year": 2019,
+          "price": 949,
+          "rating": 4.3,
+          "category": "Battle Royale",
+          "platform": "Multi-platform",
+          "image": "/products/apex.jpg",
+          "description": "Fast-paced hero battle royale.",
+          "isNew": false,
+          "isTopSeller": true,
+          "quantity": 3
+        },
+        {
+          "id": "10",
+          "title": "Fortnite",
+          "developer": "Epic Games",
+          "year": 2017,
+          "price": 1499,
+          "rating": 4.1,
+          "category": "Battle Royale",
+          "platform": "Multi-platform",
+          "image": "/products/fortnit.jpg",
+          "description": "Battle royale with building.",
+          "isNew": false,
+          "isTopSeller": true,
+          "quantity": 3
+        }
+      ],
+      "wishlist": [
+        {
+          "id": "2",
+          "title": "Red Dead Redemption II",
+          "developer": "Rockstar Games",
+          "year": 2018,
+          "price": 3999,
+          "rating": 4.8,
+          "category": "Story Mode",
+          "platform": "Multi-platform",
+          "image": "/products/rdr.jpg",
+          "description": "Epic western story experience.",
+          "isNew": false,
+          "isTopSeller": true
+        },
+        {
+          "id": "3",
+          "title": "The Witcher 3: Wild Hunt",
+          "developer": "CD Projekt Red",
+          "year": 2015,
+          "price": 999,
+          "rating": 4.9,
+          "category": "Story Mode",
+          "platform": "Multi-platform",
+          "image": "/products/witcher 2.jpg",
+          "description": "Fantasy RPG with deep storytelling.",
+          "isNew": false,
+          "isTopSeller": true
+        },
+        {
+          "id": "4",
+          "title": "God of War",
+          "developer": "Santa Monica Studio",
+          "year": 2018,
+          "price": 3999,
+          "rating": 4.7,
+          "category": "Story Mode",
+          "platform": "PlayStation",
+          "image": "/products/god of var.jpg",
+          "description": "Mythological action-adventure.",
+          "isNew": false,
+          "isTopSeller": true
+        }
+      ],
       "payments": [
         {
           "orderId": "ORD-1767767647646",
@@ -227,6 +361,120 @@
         }
       ],
       "createdAt": "2026-01-07T06:06:05.202Z"
+    },
+    {
+      "id": "1768201400501",
+      "username": "hanan1212",
+      "email": "hanan@gmail",
+      "password": "121212",
+      "role": "user",
+      "cart": [],
+      "wishlist": [],
+      "payments": [
+        {
+          "orderId": "ORD-1768201651915",
+          "date": "2026-01-12T07:07:31.915Z",
+          "items": [
+            {
+              "id": "2",
+              "title": "Red Dead Redemption II",
+              "developer": "Rockstar Games",
+              "year": 2018,
+              "price": 3999,
+              "rating": 4.8,
+              "category": "Story Mode",
+              "platform": "Multi-platform",
+              "image": "/products/rdr.jpg",
+              "description": "Epic western story experience.",
+              "isNew": false,
+              "isTopSeller": true,
+              "quantity": 2
+            },
+            {
+              "id": "3",
+              "title": "The Witcher 3: Wild Hunt",
+              "developer": "CD Projekt Red",
+              "year": 2015,
+              "price": 999,
+              "rating": 4.9,
+              "category": "Story Mode",
+              "platform": "Multi-platform",
+              "image": "/products/witcher 2.jpg",
+              "description": "Fantasy RPG with deep storytelling.",
+              "isNew": false,
+              "isTopSeller": true,
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 8997,
+          "paymentMethod": "Card",
+          "status": "Paid"
+        },
+        {
+          "orderId": "ORD-1768201686047",
+          "date": "2026-01-12T07:08:06.047Z",
+          "items": [
+            {
+              "id": "14",
+              "title": "Battlefield 2042",
+              "developer": "EA DICE",
+              "year": 2021,
+              "price": 3499,
+              "rating": 3.5,
+              "category": "Battlefield",
+              "platform": "Multi-platform",
+              "image": "/products/battlefield 2042.jpg",
+              "description": "Near-future warfare.",
+              "isNew": false,
+              "isTopSeller": false,
+              "quantity": 1
+            },
+            {
+              "id": "15",
+              "title": "Forza Horizon 5",
+              "developer": "Playground Games",
+              "year": 2021,
+              "price": 3999,
+              "rating": 4.7,
+              "category": "Racing",
+              "platform": "Xbox/PC",
+              "image": "/products/forza 4.jpg",
+              "description": "Open-world racing in Mexico.",
+              "isNew": true,
+              "isTopSeller": true,
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 7498,
+          "paymentMethod": "Card",
+          "status": "Paid"
+        },
+        {
+          "orderId": "ORD-1768202027656",
+          "date": "2026-01-12T07:13:47.656Z",
+          "items": [
+            {
+              "id": "2",
+              "title": "Red Dead Redemption II",
+              "developer": "Rockstar Games",
+              "year": 2018,
+              "price": 3999,
+              "rating": 4.8,
+              "category": "Story Mode",
+              "platform": "Multi-platform",
+              "image": "/products/rdr.jpg",
+              "description": "Epic western story experience.",
+              "isNew": false,
+              "isTopSeller": true,
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 3999,
+          "paymentMethod": "Card",
+          "status": "Paid"
+        }
+      ],
+      "createdAt": "2026-01-12T07:03:20.501Z"
     }
   ],
   "games": [

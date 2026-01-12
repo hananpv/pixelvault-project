@@ -14,7 +14,7 @@ const CategorySection = () => {
     },
     {
       name: "Open World",
- 
+  
       description: "Explore vast virtual worlds freely",
       image: "products/stt.jpg"
     },
@@ -33,7 +33,7 @@ const CategorySection = () => {
   ];
 
   const handleCategoryClick = (categoryName) => {
-    // Navigate to games page with category parameter
+    // Navigate to games page with category 
     navigate(`/games?category=${encodeURIComponent(categoryName)}`);
   };
 
@@ -48,14 +48,11 @@ const CategorySection = () => {
           <div key={category.name} className="category-card">
             <div className="category-image">
               <img src={category.image} alt={category.name} />
-              {/* <div className="category-overlay">
-                <div className="category-icon">{category.icon}</div>
-                <h3>{category.name}</h3>
-              </div> */}
+             
             </div>
             <div className="category-content">
               <p>{category.description}</p>
-              {/* Update the button to use handleCategoryClick */}
+              
 
               <button 
                 className="explore-btn"

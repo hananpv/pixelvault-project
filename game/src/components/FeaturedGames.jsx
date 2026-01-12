@@ -58,7 +58,7 @@ const FeaturedGames = () => {
               </div>
             </div>
           </div>
-        ))}
+        ))  }
       </div>
     </section>
   );

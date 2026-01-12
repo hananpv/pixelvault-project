@@ -9,7 +9,8 @@ export const CartProvider = ({ children }) => {
   const { user, isAuthenticated } = useAuth();
   const [cart, setCart] = useState([]);
 
-  // 🔄 Load cart from logged-in user
+
+
   useEffect(() => {
     if (user?.cart) {
       setCart(user.cart);
@@ -18,7 +19,8 @@ export const CartProvider = ({ children }) => {
     }
   }, [user]);
 
-  // ➕ ADD TO CART
+
+
   const addToCart = async (product) => {
     if (!isAuthenticated) {
       alert('Please login to add items to cart');
@@ -41,10 +43,10 @@ export const CartProvider = ({ children }) => {
       cart: updatedCart
     });
 
-    // alert('Added to cart');
   };
 
-  // ❌ REMOVE FROM CART
+
+
   const removeFromCart = async (id) => {
     const updatedCart = cart.filter(item => item.id !== id);
     setCart(updatedCart);
@@ -54,13 +56,13 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // 🧹 CLEAR CART
+
   const clearCart = async () => {
     setCart([]);
     await api.patch(`/users/${user.id}`, { cart: [] });
   };
 
-  // 💰 TOTAL
+  
   const getTotalPrice = () =>
     cart.reduce((t, i) => t + i.price * i.quantity, 0);
 

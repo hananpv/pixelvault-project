@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
-import '../css/Navbar.css';
+import '../css/Navbar.css';    
 
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-
+     
         {/* LOGO */}
         <div className="navbar-logo">
           <Link to="/" className="logo-link">

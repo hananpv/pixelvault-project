@@ -19,7 +19,7 @@ const Wishlist = () => {
   if (wishlist.length === 0) {
     return (
       <div className="wishlist-empty">
-        Your wishlist is empty ❤️
+        Your wishlist is empty ♥
       </div>
     );
   }

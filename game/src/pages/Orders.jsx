@@ -29,7 +29,6 @@ function Orders() {
             {order.items.map(item => (
               <div key={item.id} className="order-item">
 
-                {/* ✅ IMAGE */}
                 <img
                   src={item.image}
                   alt={item.title}

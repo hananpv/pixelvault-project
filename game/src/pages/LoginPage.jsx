@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { api } from "../api/Axios"; // ✅ CORRECT PATH
+import { api } from "../api/Axios";
 import { useAuth } from "../context/AuthContext";
 import "../css/LoginPage.css";
+import Snowfall from "react-snowfall"
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -25,7 +26,6 @@ const LoginPage = () => {
     try {
       setLoading(true);
 
-      // 🔥 FIND USER BY EMAIL OR USERNAME
       const res = await api.get("/users");
       const user = res.data.find(
         (u) =>
@@ -40,10 +40,8 @@ const LoginPage = () => {
         return;
       }
 
-      // ✅ LOGIN THROUGH AUTH CONTEXT
       login(user);
 
-      // 🔁 Redirect
       navigate("/");
     } catch (err) {
       console.error(err);
@@ -55,6 +53,7 @@ const LoginPage = () => {
 
   return (
     <div className="login-container">
+       <Snowfall color='white'/>
       <div className="login-card">
         <h2 className="login-title">PIXELVAULT</h2>
         <p className="login-subtitle">Login to your account</p>

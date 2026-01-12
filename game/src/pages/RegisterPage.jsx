@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { api } from "../api/Axios"; // ✅ correct path
+import { api } from "../api/Axios"; 
 import { useAuth } from "../context/AuthContext";
 import "../css/RegisterPage.css";
 
@@ -19,7 +19,6 @@ const RegisterPage = () => {
     e.preventDefault();
     setError("");
 
-    // 🧪 basic validation
     if (!username || !email || !password || !confirmPassword) {
       setError("All fields are required");
       return;
@@ -33,7 +32,6 @@ const RegisterPage = () => {
     try {
       setLoading(true);
 
-      // 🔍 CHECK EXISTING USERS
       const res = await api.get("/users");
 
       const emailExists = res.data.some(u => u.email === email);
@@ -50,7 +48,6 @@ const RegisterPage = () => {
         return;
       }
 
-      // ✅ REGISTER THROUGH AUTH CONTEXT
       await register({
         username,
         email,

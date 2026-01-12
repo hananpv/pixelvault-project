@@ -15,8 +15,9 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // 🔄 LOAD USER FROM LOCAL STORAGE + BACKEND
-  useEffect(() => {
+//  Page refresh / reload aayalum
+//  User login maintain cheyyan 
+   useEffect(() => {
     const loadUser = async () => {
       try {
         const savedUser = localStorage.getItem('gameStoreUser');
@@ -24,11 +25,14 @@ export const AuthProvider = ({ children }) => {
 
         const parsedUser = JSON.parse(savedUser);
 
-        // 🔥 GET FRESH USER FROM DB
+      
+
+        
         const res = await api.get(`/users/${parsedUser.id}`);
         setUser(res.data);
 
-        // 🔄 Update localStorage
+      
+
         localStorage.setItem('gameStoreUser', JSON.stringify(res.data));
       } catch (error) {
         console.error('Auth load failed:', error);
@@ -41,7 +45,7 @@ export const AuthProvider = ({ children }) => {
     loadUser();
   }, []);
 
-  // 🔐 LOGIN (expects full user from backend)
+  //expects full user from backend
   const login = async (userData) => {
     // userData MUST include cart & wishlist
     setUser(userData);
@@ -49,7 +53,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('userId', userData.id);
   };
 
-  // 📝 REGISTER
+  //  REGISTER
   const register = async (userData) => {
     const newUser = {
       ...userData,
@@ -61,7 +65,7 @@ export const AuthProvider = ({ children }) => {
       createdAt: new Date().toISOString()
     };
 
-    // 🔥 SAVE USER TO DB
+    // SAVE USER TO DB
     await api.post('/users', newUser);
 
     setUser(newUser);
@@ -71,13 +75,13 @@ export const AuthProvider = ({ children }) => {
     return newUser;
   };
 
-  // 🔄 UPDATE USER (USED BY CART/WISHLIST)
+  //  UPDATE USER (USED BY CART/WISHLIST)
   const updateUser = (updatedUser) => {
     setUser(updatedUser);
     localStorage.setItem('gameStoreUser', JSON.stringify(updatedUser));
   };
 
-  // 🚪 LOGOUT
+  //  LOGOUT
   const logout = () => {
     setUser(null);
     localStorage.removeItem('gameStoreUser');

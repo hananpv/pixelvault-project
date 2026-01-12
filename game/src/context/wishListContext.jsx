@@ -9,7 +9,7 @@ export const WishlistProvider = ({ children }) => {
   const { user, isAuthenticated } = useAuth();
   const [wishlist, setWishlist] = useState([]);
 
-  // 🔄 Load wishlist from user
+
   useEffect(() => {
     if (user?.wishlist) {
       setWishlist(user.wishlist);
@@ -18,7 +18,7 @@ export const WishlistProvider = ({ children }) => {
     }
   }, [user]);
 
-  // ❤️ ADD
+ 
   const addToWishlist = async (product) => {
     if (!isAuthenticated) {
       alert('Please login to add to wishlist');
@@ -35,7 +35,7 @@ export const WishlistProvider = ({ children }) => {
     });
   };
 
-  // ❌ REMOVE
+
   const removeFromWishlist = async (id) => {
     const updatedWishlist = wishlist.filter(item => item.id !== id);
     setWishlist(updatedWishlist);

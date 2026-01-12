@@ -5,7 +5,7 @@ import '../css/About.css'
 const About = () => {
   return (
     <div className="about-page">
-      {/* Hero Section */}
+
       <section className="about-hero">
         <div className="hero-content">
           <h1 className="hero-title">About <span className="highlight">PIXELVAULT</span></h1>
@@ -18,7 +18,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
+
       <section className="mission-section">
         <div className="container">
           <div className="mission-header">
@@ -49,7 +49,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Roadmap Section */}
+
       <section className="roadmap-section">
         <div className="container">
           <div className="roadmap-header">
@@ -88,7 +88,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Office Section */}
+     
       <section className="office-section">
         <div className="container">
           <div className="office-content">
@@ -125,7 +125,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Thank You Section */}
+      
+      
       <section className="thankyou-section">
         <div className="container">
           <div className="thankyou-content">
@@ -143,7 +144,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Footer Note */}
+
       <div className="construction-note">
         <div className="construction-icon">🚧</div>
         <p>PIXELVAULT Game Development - Exciting Things Coming Soon!</p>

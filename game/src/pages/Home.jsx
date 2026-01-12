@@ -7,18 +7,18 @@ import SpecialOffers from '../components/SpecialOffers';
 import '../css/Home.css';
 
 const Home = () => {
-  // Create floating particles
-  useEffect(() => {
-    const particles = document.querySelectorAll('.particle');
-    particles.forEach(particle => {
-      particle.style.left = `${Math.random() * 100}%`;
-      particle.style.top = `${Math.random() * 100}%`;
-    });
-  }, []);
+ 
+  // useEffect(() => {
+  //   const particles = document.querySelectorAll('.particle');
+  //   particles.forEach(particle => {
+  //     particle.style.left = `${Math.random() * 100}%`;
+  //     particle.style.top = `${Math.random() * 100}%`;
+  //   });
+  // }, []);
 
   return (
     <div className="home-page">
-      {/* Decorative Elements */}
+    
       <div className="particle"></div>
       <div className="particle"></div>
       <div className="particle"></div>
@@ -26,10 +26,10 @@ const Home = () => {
       <div className="glow-orb glow-orb-1"></div>
       <div className="glow-orb glow-orb-2"></div>
       
-      {/* Scroll Progress Indicator */}
+   
       <div className="scroll-progress"></div>
 
-      {/* Content Sections */}
+     
       <div className="section-container">
         <HeroSection />
         <div className="section-divider"></div>

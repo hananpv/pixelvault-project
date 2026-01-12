@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom';
 function Game() {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState(""); // 🔍 SIMPLE SEARCH
+  const [search, setSearch] = useState("");
 
   const { addToCart } = useCart();
   const {
@@ -17,12 +17,12 @@ function Game() {
     isInWishlist
   } = useWishlist();
 
-  // ✅ CATEGORY FROM URL
+
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const selectedCategory = searchParams.get('category');
 
-  // 🔄 FETCH GAMES
+
   useEffect(() => {
     const fetchGames = async () => {
       try {
@@ -38,7 +38,6 @@ function Game() {
     fetchGames();
   }, []);
 
-  // ✅ FILTER BY CATEGORY ONLY
   const filteredGames = selectedCategory
     ? games.filter(
         game =>
@@ -53,7 +52,8 @@ function Game() {
 
   return (
     <>
-      {/* 🔍 SIMPLE SEARCH INPUT */}
+
+
       <input
         type="text"
         placeholder="Search games..."
@@ -79,7 +79,7 @@ function Game() {
                     src={game.image || '/placeholder.png'}
                     alt={game.title}
                   />
-
+ 
                   <button
                     className={`wishlist-btn ${wishlisted ? 'active' : ''}`}
                     onClick={() =>
@@ -123,6 +123,7 @@ function Game() {
                     >
                       Buy Now
                     </button>
+            
                   </div>
                 </div>
               </div>

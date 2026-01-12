@@ -44,12 +44,10 @@ function Payment() {
     <div className="payment-container">
       <h1 className="payment-title">Payment</h1>
 
-      {/* ORDER ITEMS WITH IMAGE */}
       <div className="payment-items">
         {user.cart.map(item => (
           <div key={item.id} className="payment-item">
 
-            {/* ✅ IMAGE */}
             <img
               src={item.image}
               alt={item.title}
@@ -69,7 +67,6 @@ function Payment() {
         ))}
       </div>
 
-      {/* PAYMENT DETAILS */}
       <div className="payment-details">
         <h3>Payment Details</h3>
 
@@ -89,7 +86,6 @@ function Payment() {
         </div>
       </div>
 
-      {/* TOTAL */}
       <div className="payment-total">
         <span>Total</span>
         <span>₹{totalAmount}</span>
